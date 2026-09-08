@@ -23,11 +23,17 @@ body {
 
 /* --- 2. BACKGROUND PROPERTIES & GRADIENTS (Module 2) --- */
 header {
-    /* Linear-gradient como background-image */
-    background-image: linear-gradient(135deg, var(--brand-red) 0%, var(--bg-dark) 100%);
-    /* Text Styling Properties (Module 2) */
+    background-image: 
+        linear-gradient(135deg, rgba(220, 20, 60, 0.85) 0%, rgba(26, 26, 26, 0.9) 100%),
+        url('../../../../Imagenes/headerTOP.webp');
+    
+    /* Propiedades longhand para controlar la imagen (Module 2) */
+    background-size: cover;          /* La imagen cubre todo el espacio disponible */
+    background-position: center top; /* Centra la imagen priorizando las caras */
+    background-repeat: no-repeat;    /* Evita que se duplique si la pantalla es muy grande */
+    
     text-align: center;
-    padding: 40px 20px;
+    padding: 100px 20px; /* Aumenté el padding (espaciado interior) para que se vea más la imagen */
     border-bottom: 5px solid var(--brand-yellow);
 }
 
