@@ -1,0 +1,174 @@
+/* Uso del selector universal y variables (Module 2: Colors) */
+:root {
+    --brand-yellow: #fce300; /* HEX Color Model */
+    --brand-red: rgb(220, 20, 60); /* RGB Color Model */
+    --bg-dark: hsl(0, 0%, 10%); /* HSL Color Model */
+    --text-light: #f4f4f4;
+}
+
+/* Selector de Etiqueta (Tag Selector) */
+body {
+    /* --- Shorthand Properties vs Longhand (Module 2) --- */
+    /* Shorthand para font (incluye style, weight, size/line-height, family) */
+    font: normal 400 16px/1.6 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+    /* Longhand properties para el fondo */
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+            
+    /* Shorthand para margin */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- 2. BACKGROUND PROPERTIES & GRADIENTS (Module 2) --- */
+header {
+    /* Linear-gradient como background-image */
+    background-image: linear-gradient(135deg, var(--brand-red) 0%, var(--bg-dark) 100%);
+    /* Text Styling Properties (Module 2) */
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid var(--brand-yellow);
+}
+
+/* Selectores descendentes */
+header h1 {
+    /* Text Styling Properties: Transformación y espaciado */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra de texto */
+}
+
+header p {
+    font-style: italic; /* Text styling: italic */
+    color: #d1d1d1;
+}
+
+/* --- STREAMING_CHUNK:Styling Layout and Sections --- */
+/* Selector de Clase (Class Selector) */
+.container {
+    max-width: 900px;
+    /* Shorthand margin: arriba/abajo 20px, izquierda/derecha auto (centrado) */
+    margin: 20px auto; 
+    padding: 0 20px;
+}
+
+section {
+    background-color: hsl(0, 0%, 15%);
+    margin-bottom: 30px;
+    padding: 25px;
+    /* Border-radius para redondear las cajas */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Selector específico para Títulos de Sección */
+section h2 {
+    color: var(--brand-yellow);
+    border-bottom: 1px solid #333;
+    /* Longhand padding */
+    padding-bottom: 10px;
+}
+
+/* --- 3. IMAGE PROPERTIES (Module 2) --- */
+.members-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.member-card {
+    text-align: center;
+    width: 250px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+/* Propiedades de Imagen */
+.member-photo {
+    width: 150px;       /* Ancho fijo */
+    height: 150px;      /* Alto fijo */
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover;  /* Asegura que la imagen no se deforme */
+    border: 3px solid var(--brand-yellow); /* Borde alrededor de la imagen */
+    background-color: #444; /* Color de fondo por si la imagen no carga */
+            
+    /* Sombra para dar profundidad */
+    box-shadow: 0 0 15px rgba(252, 227, 0, 0.2); 
+}
+
+/* --- STREAMING_CHUNK:Styling Lists and Hyperlinks --- */
+/* --- 4. LIST PROPERTIES (Module 2) --- */
+/* Selector de ID (ID Selector) - Specificity Alta */
+#discography-list {
+    /* Tipos de viñeta: square, circle, disc, decimal, etc. */
+    list-style-type: square; 
+    /* Posición de la viñeta */
+    list-style-position: inside; 
+    color: #ddd;
+    line-height: 2;
+}
+
+/* Modificando elementos específicos de la lista usando pseudo-clases estructurales */
+#discography-list li:nth-child(even) {
+    background-color: rgba(255,255,255,0.05); /* RGBA (Module 2: Colors with Alpha/Transparency) */
+}
+
+/* --- 5. HYPERLINK PROPERTIES (Module 2) --- */
+/* El orden recomendado para enlaces es: link, visited, hover, active (LVHA) */
+        
+.social-links {
+    display: flex;
+    gap: 15px;
+    list-style-type: none; /* Quita las viñetas por defecto */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estado normal y no visitado */
+.social-links a:link {
+    text-decoration: none; /* Text Styling: Quita el subrayado */
+    color: var(--text-light);
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: all 0.3s ease; /* Transición suave */
+    display: inline-block;
+}
+
+/* Estado visitado */
+.social-links a:visited {
+    color: #ccc; /* Un tono ligeramente diferente para saber que ya se visitó */
+}
+
+/* Estado al pasar el cursor (Hover) */
+.social-links a:hover {
+    background-color: var(--brand-yellow);
+    color: #000;
+    border-color: var(--brand-yellow);
+    /* Transformación sutil */
+    transform: translateY(-3px); 
+}
+
+/* Estado activo (cuando se hace clic) */
+.social-links a:active {
+    background-color: #d4bf00; /* Amarillo más oscuro */
+    transform: translateY(0); /* Vuelve a su posición */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #050505;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
