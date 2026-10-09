@@ -1,0 +1,116 @@
+/* EJERCICIO 1: Botón Interactivo */
+.btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+    /* Configuración de Transición (Propiedades individuales) */ 
+    transition: background-color 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s, box-shadow 0.3s ease-in-out 0s;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* EJERCICIO 2: Comparativa de Funciones */
+.container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bar {
+    height: 40px;
+    width: 100px;
+    background-color: #06b6d4;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    border-radius: 6px;
+    transition: width 1s;
+}
+
+/* Aplicando diferentes funciones de tiempo */
+.bar.ease { transition-timing-function: ease; }
+.bar.linear { transition-timing-function: linear; }
+.bar.cubic { transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); } /* Efecto elástico */
+
+.container:hover .bar {
+    width: 100%;
+}
+
+
+/* EJERCICIO 3: Indicador de Carga */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #e2e8f0;
+    border-top-color: #3b82f6; 
+    border-radius: 50%;
+    
+    animation-name: girar;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* EJERCICIO 4: Tarjeta Informativa */
+@keyframes entradaTarjeta {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-container {
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    
+    animation: entradaTarjeta 0.8s ease-out forwards;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    height: 180px;
+    background-image: url('https://picsum.photos/400/300');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.card-container:hover .card-image {
+    transform: scale(1.1);
+}

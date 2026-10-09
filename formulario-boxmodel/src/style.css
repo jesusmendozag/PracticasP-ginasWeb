@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box; /* Incluye padding y border dentro del ancho total */
+    box-sizing: border-box;  /*Incluye padding y border dentro del ancho total */
     margin: 0;
     padding: 0;
 }
@@ -16,8 +16,8 @@ body {
  
     /* APLICACIÓN DE BOX MODEL */
     margin: 0 auto; /* Centra horizontalmente el contenedor */
-    padding: 30px; /* Relleno interno en los 4 lados */
-    border: 2px solid #3498db; /* Borde de la tarjeta */
+    padding: 50px; /* Relleno interno en los 4 lados */
+    border: 3px solid #2ecc71; /* Borde de la tarjeta */
     border-radius: 8px; /* Esquinas redondeadas */
  
     background-color: #ffffff;
@@ -45,7 +45,7 @@ input[type="email"],
 textarea {
     width: 100%; /* Ocupa todo el ancho del contenedor */
     padding: 10px 12px; /* Otorga espacio interno para el texto */
-    border: 1px solid #ccc; /* Borde estándar */
+    border: 2px solid #bdc3c7; /* Borde estándar */
     border-radius: 4px;
     font-size: 14px;
 }
@@ -59,7 +59,7 @@ textarea:focus {
 .btn-submit {
     width: 100%;
     padding: 12px; /* Aumenta el grosor interno del botón */
-    margin-top: 10px; /* Separación respecto al área de texto */
+    margin-top: 22px; /* Separación respecto al área de texto */
     border: none;
     border-radius: 4px;
     background-color: #3498db;
